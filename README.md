@@ -1,16 +1,18 @@
-# Kubernetes-v1.33-Cluster-Setup-Step-by-Step-Guide
+# 🚀 Kubernetes-v1.33-Cluster-Setup-Step-by-Step-Guide
 This repository contains a detailed, step-by-step guide for creating a Kubernetes v1.33 cluster from scratch. It includes all the necessary configurations, commands, and explanations to help you understand and build your own K8s cluster — perfect for homelabs, testing environments, or learning purposes.
 
 This guide is based on the official documentation for Kubernetes version 1.33 and is intended for x86_64 architecture devices. Any other version or architecture may require changes to the commands (such as package versions).
 
 ---
+
 # 📚 Sources:
-- Configure systemd: https://kubernetes.io/docs/setup/production-environment/container-runtimes/
-- Install containerd Option 1: https://github.com/containerd/containerd
-- Install Kubelet, Kubeadm and Kubectl v1.33: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
-- Create a cluster: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
-- Configure the cdriver (default systemd): https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/configure-cgroup-driver/#configuring-the-kubelet-cgroup-driver
-- Setting the CNI: https://vincent0426.medium.com/setting-up-a-kubernetes-cluster-with-calico-cni-and-applying-network-policies-c196b4f25687
+- 🔧 [Container runtimes (systemd)](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)
+- 🐳 [Containerd installation](https://github.com/containerd/containerd)
+- 🔧 [Kubeadm, kubelet & kubectl installation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+- ⚙️ [Cluster creation with Kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
+- 🧩 [Cgroup driver configuration](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/configure-cgroup-driver/)
+- 🌐 [Calico CNI & network policies](https://vincent0426.medium.com/setting-up-a-kubernetes-cluster-with-calico-cni-and-applying-network-policies-c196b4f25687)
+
 ---
 
 # Step 1: Install containerd as container runtime:
@@ -143,7 +145,9 @@ If you lost the command, regenerate it with:
 ```bash
 kubeadm token create --print-join-command
 ```
+
 ---
+
 # ✅ Final notes
 - Use kubectl get nodes to verify node status.
 - Tail logs for debugging: journalctl -u kubelet -f
