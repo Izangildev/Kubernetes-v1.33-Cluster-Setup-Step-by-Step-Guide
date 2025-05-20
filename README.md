@@ -14,7 +14,7 @@ This guide is based on the official documentation for Kubernetes version 1.33 an
 ---
 
 # Step 1: Install containerd as container runtime:
-Enable packet forwarding:
+Enable IP forwarding:
 ```bash
 # sysctl params required by setup, params persist across reboots
 cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
