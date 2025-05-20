@@ -4,7 +4,7 @@ This repository contains a detailed, step-by-step guide for creating a Kubernete
 This guide is based on the official documentation for Kubernetes version 1.33 and is intended for x86_64 architecture devices. Any other version or architecture may require changes to the commands (such as package versions).
 
 ---
-# Sources:
+# 📚 Sources:
 - Configure systemd: https://kubernetes.io/docs/setup/production-environment/container-runtimes/
 - Install containerd Option 1: https://github.com/containerd/containerd
 - Install Kubelet, Kubeadm and Kubectl v1.33: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
@@ -139,3 +139,11 @@ watch kubectl get tigerastatus
 ```
 # Adding a worker node to the cluster:
 After initializing the cluster with kubeadm init, a kubeadm join command is output. Use this exact command on each worker node to join them to the cluster. This command includes the token and discovery token CA certificate hash needed for secure connection.
+If you lost the command, regenerate it with:
+```bash
+kubeadm token create --print-join-command
+```
+---
+# ✅ Final notes
+- Use kubectl get nodes to verify node status.
+- Tail logs for debugging: journalctl -u kubelet -f
