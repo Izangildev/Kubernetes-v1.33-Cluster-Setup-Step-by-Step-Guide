@@ -1,3 +1,12 @@
+# Disabling Swap
+Before proceeding with the installation steps, it's necessary to disable swap on your server.
+You can temporarily disable swap by running the following command:
+```bash
+sudo swapoff -a
+```
+This command will only disable swap for the current session.
+To make this change permanent, edit the /etc/fstab file and comment out the line that references the swap partition.
+
 # 🚀 Kubernetes-v1.33-Cluster-Setup-Step-by-Step-Guide
 This repository contains a detailed, step-by-step guide for creating a Kubernetes v1.33 cluster from scratch. It includes all the necessary configurations, commands, and explanations to help you understand and build your own K8s cluster — perfect for homelabs, testing environments, or learning purposes.
 
